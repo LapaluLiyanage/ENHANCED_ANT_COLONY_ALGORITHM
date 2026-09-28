@@ -16,6 +16,19 @@ This repository contains:
 | **Metrics** | `motp/metrics.py` | Non-dominated filter, exact hypervolume, compromise gap to the ideal point. |
 | **Benchmark** | `experiments/run_benchmark.py` | Seeded instances, repeated runs, Friedman + Holm-corrected Wilcoxon tests, figures. |
 
+## Demo app
+
+An interactive planner built with Streamlit: load the sample data, generate a random instance, or upload your own CSVs, then compare the paper's method, VAM, the ant colony and the exact LP optimum on a trade-off chart, choose a plan by setting how much each objective matters, and download the shipping plan.
+
+```bash
+pip install -r requirements.txt
+streamlit run app/streamlit_app.py
+```
+
+![Streamlit demo](docs/app_screenshot.png)
+
+Unbalanced problems (total supply ≠ total demand) are balanced automatically with a zero-cost dummy source or destination.
+
 ## Quick start
 
 ```bash
@@ -129,6 +142,7 @@ Friedman test across methods: p ≈ 10⁻¹⁰³. Pairwise Wilcoxon signed-rank 
 
 ```
 motp/                 package (problem, combiners, fixedprob, aco, localsearch, exact, metrics, legacy)
+app/                  Streamlit demo app
 motp_*_fixedprob.py   backwards-compatible wrappers / CLIs
 data/                 sample instances
 experiments/          benchmark script
