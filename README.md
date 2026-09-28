@@ -1,5 +1,11 @@
 # Enhanced Ant Colony Algorithm for the Multi-Objective Transportation Problem
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://enhancedantcolonyalgorithm.streamlit.app/)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![Tests](https://img.shields.io/badge/tests-322%20passing-brightgreen)
+
+**Live demo: [enhancedantcolonyalgorithm.streamlit.app](https://enhancedantcolonyalgorithm.streamlit.app/)** — try the planner in your browser, no install needed.
+
 **Enhanced Ant Colony Algorithm Incorporating Geometric Mean for Multi-Objective Transportation Challenges** — implementation, exact baselines, and a reproducible benchmark.
 
 The **Multi-Objective Transportation Problem (MOTP)**: ship goods from *m* sources (supplies *aᵢ*) to *n* destinations (demands *bⱼ*) while minimising *K* objectives at once (e.g. cost, time, distance), each with its own cost matrix.
@@ -18,6 +24,8 @@ This repository contains:
 
 ## Demo app
 
+**[Open the live app →](https://enhancedantcolonyalgorithm.streamlit.app/)**
+
 An interactive planner built with Streamlit: load the sample data, generate a random instance, or upload your own CSVs, then compare the paper's method, VAM, the ant colony and the exact LP optimum on a trade-off chart, choose a plan by setting how much each objective matters, and download the shipping plan.
 
 ```bash
@@ -29,7 +37,7 @@ streamlit run app/streamlit_app.py
 
 Unbalanced problems (total supply ≠ total demand) are balanced automatically with a zero-cost dummy source or destination.
 
-**Deploying.** The app runs on [Streamlit Community Cloud](https://share.streamlit.io) (free): *Create app* → repository `LapaluLiyanage/ENHANCED_ANT_COLONY_ALGORITHM`, branch `main`, main file `app/streamlit_app.py`. Dependencies come from `requirements.txt`. Serverless hosts such as Vercel can't run Streamlit, because it needs a long-running server.
+**Deploying.** The app is live at <https://enhancedantcolonyalgorithm.streamlit.app/> on [Streamlit Community Cloud](https://share.streamlit.io) (free) and redeploys automatically on every push to `main`. To deploy your own copy: *Create app* → repository `LapaluLiyanage/ENHANCED_ANT_COLONY_ALGORITHM`, branch `main`, main file `app/streamlit_app.py`. Dependencies come from `requirements.txt`. Serverless hosts such as Vercel can't run Streamlit, because it needs a long-running server.
 
 ## Quick start
 
