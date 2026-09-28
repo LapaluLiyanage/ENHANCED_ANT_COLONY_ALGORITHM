@@ -29,6 +29,8 @@ streamlit run app/streamlit_app.py
 
 Unbalanced problems (total supply ≠ total demand) are balanced automatically with a zero-cost dummy source or destination.
 
+**Deploying.** The app runs on [Streamlit Community Cloud](https://share.streamlit.io) (free): *Create app* → repository `LapaluLiyanage/ENHANCED_ANT_COLONY_ALGORITHM`, branch `main`, main file `app/streamlit_app.py`. Dependencies come from `requirements.txt`. Serverless hosts such as Vercel can't run Streamlit, because it needs a long-running server.
+
 ## Quick start
 
 ```bash
